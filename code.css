@@ -4,7 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     text-decoration: none;
- }
+}
 
 body{
     display: flex;
@@ -15,7 +15,7 @@ body{
 }
 
 .container{
-    background-color:bisque;
+    background-color: bisque;
     padding: 2rem;
     border-radius: 1rem;
     min-height: 45vh;
@@ -26,7 +26,7 @@ form{
     margin: 2rem 0 1rem 0; 
 }
 
-form select ,
+form select,
 button,
 input{
     width: 100%;
@@ -34,22 +34,30 @@ input{
     outline: none;
     border-radius: .5rem;
 }
+
 form input{
     border: 1px solid lightslategray;
     font-size: 1rem;
     height: 3rem;
     padding-left: 0.5rem;
+    transition: border-color 0.3s, border-width 0.3s;
+}
+
+form input:focus,
+form input:hover {
+    border-color: blue;
+    border-width: 2px;
 }
 
 .dropdown{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin-top: 2rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem; 
 }
 
 .dropdown i {
-    font-size: 1.5rem ;
+    font-size: 1.5rem;
     margin-top: 1rem;
 }
 
@@ -64,21 +72,29 @@ form input{
     width: 6rem;
     border-radius: 0.5rem;
     border: 1px solid lightslategray;
+    transition: border-color 0.3s;
+    cursor: pointer;
 }
 
-.select-container select{
-    font-size: 1rem;
-    width: auto;
+.select-container:hover {
+    border-color: blue;
+    border-width: 2px;
 }
 
 .msg{
     margin: 2rem 0 2rem 0;
 }
 
-form button{
+form button {
     height: 3rem;
-    background-color:blueviolet;
+    background-color: blueviolet;
     color: aliceblue;
     font-size: large;
     cursor: pointer;
+    transition: background-color 0.3s, font-size 0.3s;
+}
+
+form button:hover {
+    font-size: 20px;
+    background-color: rgb(82, 82, 198);
 }
