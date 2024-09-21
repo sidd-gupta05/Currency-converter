@@ -10,34 +10,34 @@
 <body>
     <div class="container">
         <h2>Currency Converter</h2>
-        <form >
+        <form>
             <div class="amount">
-                <p>Enter the Amount :</p>
-                <input  value="1" type="text">
+                <p>Enter the Amount:</p>
+                <input value="1" type="number" min="1" step="any">
             </div>
             <div class="dropdown">
                 <div class="from">
                     <p>From</p>
                     <div class="select-container">
                         <img src="https://flagsapi.com/US/flat/64.png" alt="">
-                        <select name="from" id=""> 
+                        <select name="from"> 
                         </select>
                     </div>
                 </div>
                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 <div class="to">
-                     <p>To</p>
-                        <div class="select-container">
-                            <img src="https://flagsapi.com/IN/flat/64.png" alt="">
-                            <select name="to" id=""> 
-                            </select>
-                        </div>
+                    <p>To</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/IN/flat/64.png" alt="">
+                        <select name="to"> 
+                        </select>
                     </div>
                 </div>
-                <div class="msg">1 USD = 84 INR</div>
-                <button>Get Excahnge</button>
-            </form>
-        </div>
-<script src="code.js"></script>
+            </div>
+            <div class="msg">1 USD = 84 INR</div>
+            <button type="submit">Get Exchange</button>
+        </form>
+    </div>
+    <script src="code.js"></script>
 </body>
 </html>

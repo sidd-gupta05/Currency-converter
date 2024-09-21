@@ -1,4 +1,4 @@
-const countryList = {
+const countryList = { 
     AF: "Afghanistan",
     AL: "Albania",
     DZ: "Algeria",
@@ -89,7 +89,7 @@ const countryList = {
     GW: "Guinea-Bissau",
     GY: "Guyana",
     HT: "Haiti",
-    HM: "Heard Island and Mcdonald Islands",
+    HM: "Heard Island and McDonald Islands",
     VA: "Holy See (Vatican City State)",
     HN: "Honduras",
     HK: "Hong Kong",
@@ -241,7 +241,7 @@ const countryList = {
     ZW: "Zimbabwe"
 };
 
-const Base_URL = "https://api.exchangeratesapi.io/v1/latest?access_key=YOUR_API_KEY";
+const Base_URL = "https://v6.exchangerate-api.com/v6/f3d27ff6d7565bad2e12cf98/latest/USD";
 
 const dropdown = document.querySelectorAll(".dropdown select");
 const btn = document.querySelector("form button");
@@ -255,9 +255,9 @@ for (let select of dropdown) {
         newOption.innerText = currcode;
         newOption.value = currcode;
         if (select.name === "from" && currcode === "US") {
-            newOption.selected = "selected";
+            newOption.selected = true;
         } else if (select.name === "to" && currcode === "IN") {
-            newOption.selected = "selected";
+            newOption.selected = true;
         }
         select.append(newOption);
     }
@@ -268,7 +268,6 @@ for (let select of dropdown) {
 
 const updateFlag = (element) => {
     let currcode = element.value;
-    let countryCode = countryList[currcode];
     let newSrc = `https://flagsapi.com/${currcode}/flat/64.png`;
     let img = element.parentElement.querySelector("img");
     img.src = newSrc;
